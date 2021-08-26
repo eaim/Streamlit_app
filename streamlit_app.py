@@ -3,7 +3,7 @@ import streamlit as st
 # working with sample data.
 import numpy as np
 import pandas as pd
-import seaborn as sns
+# import seaborn as sns
 import matplotlib
 import matplotlib.pyplot as plt
 
@@ -17,15 +17,16 @@ asia_df = df[df['Region'].str.contains('ASIA')]
 country_by_region = df.Region.value_counts()
 country_by_region
 
-sns.set_style('darkgrid')
+# sns.set_style('darkgrid')
 matplotlib.rcParams['font.size']=14
 matplotlib.rcParams['figure.figsize']= (12,12)
 matplotlib.rcParams['figure.facecolor']= '#00000000'
 
 fig,ax = plt.subplots()
 
-sns.set(rc={'figure.figsize':(10,5)})
-ax = sns.barplot(country_by_region.index,country_by_region)
+# sns.set(rc={'figure.figsize':(10,5)})
+# ax = sns.barplot(country_by_region.index,country_by_region)
+ax.bar(country_by_region.index,country_by_region)
 ax.set_xlabel('Region')
 ax.set_ylabel('Count')
 plt.title('Number of countries in each region')
