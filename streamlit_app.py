@@ -26,7 +26,6 @@ fig,ax = plt.subplots()
 
 sns.set(rc={'figure.figsize':(10,5)})
 ax = sns.barplot(country_by_region.index,country_by_region)
-ax.bar(country_by_region.index,country_by_region)
 ax.set_xlabel('Region')
 ax.set_ylabel('Count')
 plt.title('Number of countries in each region')
