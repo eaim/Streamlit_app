@@ -45,11 +45,11 @@ for i in ax.patches:
             s='{:.0f}'.format(height),
             ha='center')
 
-st.write('We can see above how bar chat is used to visualize data')
+st.write('We can see how bar chat is used to visualize data')
 
 st.pyplot(fig)
 
-st.header('lets try another chart call PIE chart')
+st.header('lets try another chart called PIE chart')
 st.subheader('First we will load dataset')
 region_population = df.groupby('Region').Population.sum()
 region_population
