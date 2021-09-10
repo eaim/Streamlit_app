@@ -15,12 +15,7 @@ import collections
 
 import utils
 
-add_selectbox = st.sidebar.selectbox(
-    "How would you like to be contacted?",
-    ("Email", "Home phone", "Mobile phone")
-)
 
-st.title('Visualizing world countries data')
 
 #*************************************#
 # Set up github access for "Open in Colab" button.
@@ -48,22 +43,32 @@ else:
 
 
 
-template_dict = collections.defaultdict(dict)
+# template_dict = collections.defaultdict(dict)
+# template_dirs = [
+#     f for f in os.scandir("templates") if f.is_dir() and f.name != "example"
+# ]
+# # TODO: Find a good way to sort templates, e.g. by prepending a number to their name
+# #   (e.g. 1_Image classification_PyTorch).
+# template_dirs = sorted(template_dirs, key=lambda e: e.name)
+# for template_dir in template_dirs:
+#     try:
+#         # Templates with task + framework.
+#         task, framework = template_dir.name.split("_")
+#         template_dict[task][framework] = template_dir.path
+#     except ValueError:
+#         # Templates with task only.
+#         template_dict[template_dir.name] = template_dir.path
+# # print(template_dict)
+
+
+
 template_dirs = [
-    f for f in os.scandir("templates") if f.is_dir() and f.name != "example"
+    f for f in os.scandir("templates") if f.is_dir() 
 ]
-# TODO: Find a good way to sort templates, e.g. by prepending a number to their name
-#   (e.g. 1_Image classification_PyTorch).
-template_dirs = sorted(template_dirs, key=lambda e: e.name)
-for template_dir in template_dirs:
-    try:
-        # Templates with task + framework.
-        task, framework = template_dir.name.split("_")
-        template_dict[task][framework] = template_dir.path
-    except ValueError:
-        # Templates with task only.
-        template_dict[template_dir.name] = template_dir.path
-# print(template_dict)
+
+template_dirs= sorted(template_dirs, key=lambda e: e.name)
+                      
+
 
 
 with st.sidebar:
@@ -75,15 +80,15 @@ with st.sidebar:
     # )
     st.write("## Task")
     task = st.selectbox(
-        "Which problem do you want to solve?", list(template_dict.keys())
+        "Which problem do you want to solve?", list(template_dirs)
     )
-    if isinstance(template_dict[task], dict):
-        framework = st.selectbox(
-            "In which framework?", list(template_dict[task].keys())
-        )
-        template_dir = template_dict[task][framework]
-    else:
-        template_dir = template_dict[task]
+#     if isinstance(template_dict[task], dict):
+#         framework = st.selectbox(
+#             "In which framework?", list(template_dict[task].keys())
+#         )
+#         template_dir = template_dict[task][framework]
+#     else:
+#         template_dir = template_dict[task]
 #*************************************#
 st.header('Here are some of the countries data in each region')
 
