@@ -6,7 +6,14 @@ import pandas as pd
 import seaborn as sns
 import matplotlib
 import matplotlib.pyplot as plt
+from jinja2 import Environment, FileSystemLoader
+import uuid
+from github import Github
+from dotenv import load_dotenv
+import os
 import collections
+
+import utils
 
 add_selectbox = st.sidebar.selectbox(
     "How would you like to be contacted?",
@@ -16,6 +23,31 @@ add_selectbox = st.sidebar.selectbox(
 st.title('Visualizing world countries data')
 
 #*************************************#
+# Set up github access for "Open in Colab" button.
+# TODO: Maybe refactor this to another file.
+load_dotenv()  # load environment variables from .env file
+if os.getenv("GITHUB_TOKEN") and os.getenv("REPO_NAME"):
+    g = Github(os.getenv("GITHUB_TOKEN"))
+    repo = g.get_repo(os.getenv("REPO_NAME"))
+    colab_enabled = True
+
+    def add_to_colab(notebook):
+        """Adds notebook to Colab by pushing it to Github repo and returning Colab link."""
+        notebook_id = str(uuid.uuid4())
+        repo.create_file(
+            f"notebooks/{notebook_id}/generated-notebook.ipynb",
+            f"Added notebook {notebook_id}",
+            notebook,
+        )
+        colab_link = f"http://colab.research.google.com/github/{os.getenv('REPO_NAME')}/blob/main/notebooks/{notebook_id}/generated-notebook.ipynb"
+        return colab_link
+
+
+else:
+    colab_enabled = False
+
+
+
 template_dict = collections.defaultdict(dict)
 template_dirs = [
     f for f in os.scandir("templates") if f.is_dir() and f.name != "example"
