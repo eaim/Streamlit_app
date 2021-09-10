@@ -7,6 +7,11 @@ import seaborn as sns
 import matplotlib
 import matplotlib.pyplot as plt
 
+add_selectbox = st.sidebar.selectbox(
+    "How would you like to be contacted?",
+    ("Email", "Home phone", "Mobile phone")
+)
+
 st.title('Visualizing world countries data')
 
 st.header('Here are some of the countries data in each region')
