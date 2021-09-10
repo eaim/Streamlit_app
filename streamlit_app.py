@@ -6,6 +6,7 @@ import pandas as pd
 import seaborn as sns
 import matplotlib
 import matplotlib.pyplot as plt
+import collections
 
 add_selectbox = st.sidebar.selectbox(
     "How would you like to be contacted?",
