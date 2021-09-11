@@ -59,39 +59,50 @@ template_dirs['dir'] = None
 
 with st.sidebar:
     option = st.sidebar.selectbox(
-    'Select One Person',img_dirs['dir'])    
+    'Select One Person',img_dirs['dir'])
     
-    if (option == 'Messi'):
+    def load_img(name):
         for f in os.scandir("templates"):
-            if (f.is_dir() and f.name == 'Messi'):
+            if (f.is_dir() and f.name == name):
                 list_dir = []
                 for img in os.scandir(f):
                     list_dir.append(img.name)
         template_dirs['dir'] = list_dir
+    
+    load_img(option)
+        
+    
+#     if (option == 'Messi'):
+#         for f in os.scandir("templates"):
+#             if (f.is_dir() and f.name == 'Messi'):
+#                 list_dir = []
+#                 for img in os.scandir(f):
+#                     list_dir.append(img.name)
+#         template_dirs['dir'] = list_dir
 
-    if (option == 'Obama'):
-        for f in os.scandir("templates"):
-            if (f.is_dir() and f.name == 'Obama'):
-                list_dir = []
-                for img in os.scandir(f):
-                    list_dir.append(img.name)
-        template_dirs['dir'] = list_dir        
+#     if (option == 'Obama'):
+#         for f in os.scandir("templates"):
+#             if (f.is_dir() and f.name == 'Obama'):
+#                 list_dir = []
+#                 for img in os.scandir(f):
+#                     list_dir.append(img.name)
+#         template_dirs['dir'] = list_dir        
         
-    if (option == 'Jackie_Chan'):
-        for f in os.scandir("templates"):
-            if (f.is_dir() and f.name == 'Jackie_Chan'):
-                list_dir = []
-                for img in os.scandir(f):
-                    list_dir.append(img.name)
-        template_dirs['dir'] = list_dir
+#     if (option == 'Jackie_Chan'):
+#         for f in os.scandir("templates"):
+#             if (f.is_dir() and f.name == 'Jackie_Chan'):
+#                 list_dir = []
+#                 for img in os.scandir(f):
+#                     list_dir.append(img.name)
+#         template_dirs['dir'] = list_dir
         
-    if (option == 'Daw_Su'):
-        for f in os.scandir("templates"):
-            if (f.is_dir() and f.name == 'Daw_Su'):
-                list_dir = []
-                for img in os.scandir(f):
-                    list_dir.append(img.name)
-        template_dirs['dir'] = list_dir       
+#     if (option == 'Daw_Su'):
+#         for f in os.scandir("templates"):
+#             if (f.is_dir() and f.name == 'Daw_Su'):
+#                 list_dir = []
+#                 for img in os.scandir(f):
+#                     list_dir.append(img.name)
+#         template_dirs['dir'] = list_dir       
                  
     st.selectbox("Choose any one image", template_dirs['dir'])
     st.info(
