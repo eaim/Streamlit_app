@@ -70,23 +70,23 @@ template_dirs['dir'] = [
 ]
 
 # template_dirs= sorted(template_dirs, key=lambda e: e.name)
-
+st.write(template_dirs['dir'])
 
                       
 
 
 
-with st.sidebar:
-    st.info(
-        "🎈 **NEW:** Add your own code template to this site! [Guide](https://github.com/jrieke/traingenerator#adding-new-templates)"
-    )
-    # st.error(
-    #     "Found a bug? [Report it](https://github.com/jrieke/traingenerator/issues) 🐛"
-    # )
-    st.write("## Task")
-    task = st.selectbox(
-        "Which problem do you want to solve?", template_dirs['dir']
-    )
+# with st.sidebar:
+#     st.info(
+#         "🎈 **NEW:** Add your own code template to this site! [Guide](https://github.com/jrieke/traingenerator#adding-new-templates)"
+#     )
+#     # st.error(
+#     #     "Found a bug? [Report it](https://github.com/jrieke/traingenerator/issues) 🐛"
+#     # )
+#     st.write("## Task")
+#     task = st.selectbox(
+#         "Which problem do you want to solve?", template_dirs['dir']
+#     )
 #     if isinstance(template_dict[task], dict):
 #         framework = st.selectbox(
 #             "In which framework?", list(template_dict[task].keys())
