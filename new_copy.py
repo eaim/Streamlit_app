@@ -55,7 +55,7 @@ option = st.sidebar.selectbox(
     'Select One Person',img_dirs['dir'])
 
 if (option == 'Messi'):
-    st.sidebar.selectbox("Choose any one image", template_dirs['dir']
+    st.sidebar.selectbox("Choose any one image", template_dirs['dir'])
 
 
 
