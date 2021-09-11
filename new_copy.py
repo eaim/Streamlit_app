@@ -48,6 +48,7 @@ img_dirs = pd.DataFrame()
 img_dirs['dir'] = ['Messi','Obama','Jackie_Chan','Daw_Su']
 
 template_dirs = pd.DataFrame()
+template_dirs['dir'] = None
 # list_dir = []
 # for f in os.scandir("templates"):
 #     for img in os.scandir(f):
@@ -65,7 +66,7 @@ with st.sidebar:
             if (f.is_dir() and f.name == 'Messi'):
                 list_dir = []
                 for img in os.scandir(f):
-                    list_dir.append(img)
+                    list_dir.append(img.name)
         template_dirs['dir'] = list_dir
 
     if (option == 'Obama'):
@@ -73,7 +74,7 @@ with st.sidebar:
             if (f.is_dir() and f.name == 'Obama'):
                 list_dir = []
                 for img in os.scandir(f):
-                    list_dir.append(img)
+                    list_dir.append(img.name)
         template_dirs['dir'] = list_dir        
         
     if (option == 'Jackie_Chan'):
@@ -81,7 +82,7 @@ with st.sidebar:
             if (f.is_dir() and f.name == 'Jackie_Chan'):
                 list_dir = []
                 for img in os.scandir(f):
-                    list_dir.append(img)
+                    list_dir.append(img.name)
         template_dirs['dir'] = list_dir
         
     if (option == 'Daw_Su'):
@@ -89,7 +90,7 @@ with st.sidebar:
             if (f.is_dir() and f.name == 'Daw_Su'):
                 list_dir = []
                 for img in os.scandir(f):
-                    list_dir.append(img)
+                    list_dir.append(img.name)
         template_dirs['dir'] = list_dir       
                  
     st.selectbox("Choose any one image", template_dirs['dir'])
