@@ -64,14 +64,14 @@ else:
 # # print(template_dict)
 
 
-
-template_dirs = [
+template_dirs = pd.Dataframe()
+template_dirs[dir] = [
     f for f in os.scandir("templates") if f.is_dir() 
 ]
 
 template_dirs= sorted(template_dirs, key=lambda e: e.name)
 
-st.write(template_dirs)
+
                       
 
 
@@ -85,7 +85,7 @@ with st.sidebar:
     # )
     st.write("## Task")
     task = st.selectbox(
-        "Which problem do you want to solve?", template_dirs
+        "Which problem do you want to solve?", template_dirs[dir]
     )
 #     if isinstance(template_dict[task], dict):
 #         framework = st.selectbox(
