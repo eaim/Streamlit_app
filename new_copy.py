@@ -44,7 +44,7 @@ else:
 template_dirs = pd.DataFrame()
 template_dirs['dir'] = []
 for f in os.scandir("templates"):
-    for img in f:
+    for img in os.scandir(f):
         template_dirs['dir'].append(img)
 
 
