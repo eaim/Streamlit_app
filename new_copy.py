@@ -99,5 +99,5 @@ for f in os.scandir("templates"):
 #     else:
 #         template_dir = template_dict[task]
 #*************************************#
-st.header('Here are some of the countries data in each region')
+# st.header('Here are some of the countries data in each region')
 
