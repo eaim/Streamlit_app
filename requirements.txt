@@ -6,3 +6,4 @@ seaborn==0.11.0
 pygithub
 python-dotenv
 utils
+tensorflow
