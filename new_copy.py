@@ -56,7 +56,7 @@ template_dirs = pd.DataFrame()
 
 
 
-with st.side_bar:
+with st.sidebar:
     option = st.sidebar.selectbox(
     'Select One Person',img_dirs['dir'])    
     
