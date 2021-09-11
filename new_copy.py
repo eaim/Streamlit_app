@@ -74,7 +74,11 @@ else:
 
 for f in os.scandir("templates"):
     if f.is_dir():
-        print(st.write(f)
+        st.write(f)
+    else:
+        st.write('nothing')
+        
+     
 
                       
 
