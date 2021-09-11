@@ -65,7 +65,7 @@ else:
 
 
 template_dirs = pd.DataFrame()
-template_dirs[dir] = [
+template_dirs[direction] = [
     f for f in os.scandir("templates") if f.is_dir() 
 ]
 
