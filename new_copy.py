@@ -42,10 +42,11 @@ else:
     colab_enabled = False
    
 template_dirs = pd.DataFrame()
-template_dirs['dir'] = []
+list_dir = []
 for f in os.scandir("templates"):
     for img in os.scandir(f):
-        template_dirs['dir'].append(img)
+        list_dir.append(img)
+template_dirs['dir'] = list_dir
 
 
 
