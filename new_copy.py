@@ -41,24 +41,61 @@ if os.getenv("GITHUB_TOKEN") and os.getenv("REPO_NAME"):
 else:
     colab_enabled = False
    
-template_dirs = pd.DataFrame()
-list_dir = []
-for f in os.scandir("templates"):
-    for img in os.scandir(f):
-        list_dir.append(img)
-template_dirs['dir'] = list_dir
 
 
 
 img_dirs = pd.DataFrame()
 img_dirs['dir'] = ['Messi','Obama','Jackie_Chan','Daw_Su']
-option = st.sidebar.selectbox(
-    'Select One Person',img_dirs['dir'])
 
-if (option == 'Messi'):
-    st.sidebar.selectbox("Choose any one image", template_dirs['dir'])
+template_dirs = pd.DataFrame()
+# list_dir = []
+# for f in os.scandir("templates"):
+#     for img in os.scandir(f):
+#         list_dir.append(img)
+# template_dirs['dir'] = list_dir
 
 
 
+with st.side_bar:
+    option = st.sidebar.selectbox(
+    'Select One Person',img_dirs['dir'])    
+    
+    if (option == 'Messi'):
+        for f in os.scandir("templates"):
+            if f is_dir and f.name = 'Messi':
+                list_dir = []
+                for img in os.scandir(f):
+                    list_dir.append(img)
+        template_dirs['dir'] = list_dir
+
+    if (option == 'Obama'):
+        for f in os.scandir("templates"):
+            if f is_dir and f.name = 'Obama':
+                list_dir = []
+                for img in os.scandir(f):
+                    list_dir.append(img)
+        template_dirs['dir'] = list_dir        
+        
+    if (option == 'Jackie_Chan'):
+        for f in os.scandir("templates"):
+            if f is_dir and f.name = 'Jackie_Chan':
+                list_dir = []
+                for img in os.scandir(f):
+                    list_dir.append(img)
+        template_dirs['dir'] = list_dir
+        
+    if (option == 'Daw_Su'):
+        for f in os.scandir("templates"):
+            if f is_dir and f.name = 'Daw_Su':
+                list_dir = []
+                for img in os.scandir(f):
+                    list_dir.append(img)
+        template_dirs['dir'] = list_dir       
+                 
+    st.selectbox("Choose any one image", template_dirs['dir'])
+    st.info(
+        "🎈 **NEW:** Add your own code template to this site!"
+    )
+    
 
 
