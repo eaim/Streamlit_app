@@ -7,3 +7,4 @@ pygithub
 python-dotenv
 utils
 tensorflow
+google-colab
