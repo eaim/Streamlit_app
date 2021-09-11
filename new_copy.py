@@ -85,7 +85,7 @@ with st.sidebar:
     # )
     st.write("## Task")
     task = st.selectbox(
-        "Which problem do you want to solve?", template_dirs[dir]
+        "Which problem do you want to solve?", template_dirs['dir']
     )
 #     if isinstance(template_dict[task], dict):
 #         framework = st.selectbox(
