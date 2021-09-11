@@ -64,13 +64,17 @@ else:
 # # print(template_dict)
 
 
-template_dirs = pd.DataFrame()
-template_dirs['dir'] = [
-    f for f in os.scandir("templates") if f.is_dir() 
-]
+# template_dirs = pd.DataFrame()
+# template_dirs['dir'] = [
+#     f for f in os.scandir("templates") if f.is_dir() 
+# ]
 
-# template_dirs= sorted(template_dirs, key=lambda e: e.name)
-st.write(template_dirs['dir'])
+# # template_dirs= sorted(template_dirs, key=lambda e: e.name)
+# st.write(template_dirs['dir'])
+
+for f in os.scandir("templates"):
+    if f.is_dir():
+        print(st.write(f)
 
                       
 
