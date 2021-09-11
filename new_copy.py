@@ -70,44 +70,11 @@ with st.sidebar:
         template_dirs['dir'] = list_dir
     
     load_img(option)
-        
+                        
+    img_file = st.selectbox("Choose any one image", template_dirs['dir'])
+    st.info("Copyright@Anonymous")
     
-#     if (option == 'Messi'):
-#         for f in os.scandir("templates"):
-#             if (f.is_dir() and f.name == 'Messi'):
-#                 list_dir = []
-#                 for img in os.scandir(f):
-#                     list_dir.append(img.name)
-#         template_dirs['dir'] = list_dir
-
-#     if (option == 'Obama'):
-#         for f in os.scandir("templates"):
-#             if (f.is_dir() and f.name == 'Obama'):
-#                 list_dir = []
-#                 for img in os.scandir(f):
-#                     list_dir.append(img.name)
-#         template_dirs['dir'] = list_dir        
-        
-#     if (option == 'Jackie_Chan'):
-#         for f in os.scandir("templates"):
-#             if (f.is_dir() and f.name == 'Jackie_Chan'):
-#                 list_dir = []
-#                 for img in os.scandir(f):
-#                     list_dir.append(img.name)
-#         template_dirs['dir'] = list_dir
-        
-#     if (option == 'Daw_Su'):
-#         for f in os.scandir("templates"):
-#             if (f.is_dir() and f.name == 'Daw_Su'):
-#                 list_dir = []
-#                 for img in os.scandir(f):
-#                     list_dir.append(img.name)
-#         template_dirs['dir'] = list_dir       
-                 
-    st.selectbox("Choose any one image", template_dirs['dir'])
-    st.info(
-        "🎈 **NEW:** Add your own code template to this site!"
-    )
+ 
     
 
 
