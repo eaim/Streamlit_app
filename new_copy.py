@@ -102,6 +102,6 @@ with st.sidebar:
         template_dir = template_dict[task][framework]
     else:
         template_dir = template_dict[task]
-*************************************#
+# *************************************#
 st.header('Here are some of the countries data in each region')
 
