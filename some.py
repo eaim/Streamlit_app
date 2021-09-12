@@ -1,7 +1,7 @@
 import streamlit as st
 import numpy as np
 import pandas as pd
-import seaborn as sns
+# import seaborn as sns
 import matplotlib
 import matplotlib.pyplot as plt
 from jinja2 import Environment, FileSystemLoader
