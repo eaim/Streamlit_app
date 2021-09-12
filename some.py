@@ -2,8 +2,8 @@ import streamlit as st
 import numpy as np
 import pandas as pd
 # import seaborn as sns
-import matplotlib
-import matplotlib.pyplot as plt
+# import matplotlib
+# import matplotlib.pyplot as plt
 from jinja2 import Environment, FileSystemLoader
 import uuid
 from github import Github
@@ -81,9 +81,9 @@ with st.sidebar:
 #*****************************************#
 #loading model file and test
 
-import urllib.request
-import zipfile
-from io import BytesIO
+# import urllib.request
+# import zipfile
+# from io import BytesIO
 
 #url = 'https://github.com/Rajkap/Streamlit_app/blob/691694146b2baf55ed03dead842aa2b2d3e90224/model_file.zip'
 #z = zipfile.ZipFile(BytesIO(urllib.request.urlopen(url).read()))
