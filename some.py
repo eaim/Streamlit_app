@@ -97,10 +97,11 @@ import os
 from zipfile import ZipFile
 work_dir = os.getcwd()                                                  #Saves the current working directory.
 print(work_dir)
-st.write(work_dir)
-# with ZipFile(os.path.join(work_dir ,'model_file.zip'),'r') as zipobject:
-#   zipobject.extractall() 
-
+# st.write(work_dir)
+with ZipFile(os.path.join(work_dir ,'model_file.zip'),'r') as zipobject:
+  zipobject.extractall() 
+path = os.listdir(work_dir)
+st.write(path)
 # model_path = None
 # for f in os.scandir("model_file"):
 #      if f.name == 'model_face_recog_eg1 - Copy.h5':
