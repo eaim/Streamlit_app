@@ -108,7 +108,7 @@ for f in path:
          model_path = f
 
 
-model_file = tf.keras.models.load_model(model_path)
+# model_file = tf.keras.models.load_model(model_path)
 
 
 #path = input('Enter the path of your image in order to predict:')
