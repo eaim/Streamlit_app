@@ -110,8 +110,8 @@ for f in path:
 
 
 model_file = tf.keras.models.load_model(model_path)
-
-real_path = os.path.join(work_dir ,option,img_file)
+template ='templates'
+real_path = os.path.join(work_dir ,template,option,img_file)
 st.write(real_path)
 #path = input('Enter the path of your image in order to predict:')
 # img_path = 'https://github.com/Rajkap/Streamlit_app/blob/691694146b2baf55ed03dead842aa2b2d3e90224/templates/'+option+'/'+img_file
