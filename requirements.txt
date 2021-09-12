@@ -5,6 +5,7 @@ pandas
 seaborn==0.11.0
 pygithub
 python-dotenv
+dotenv
 utils
 tensorflow
 google-colab
