@@ -99,7 +99,7 @@ with ZipFile(os.path.join(work_dir ,'model_file.zip'),'r') as zipobject:
 
 model_path = None
 for f in os.scandir("model_file"):
-     if f.name == 'model_face_recog_eg1 - Copy.h5'
+     if f.name == 'model_face_recog_eg1 - Copy.h5':
          model_path = f
 
 
