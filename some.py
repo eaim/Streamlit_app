@@ -108,12 +108,12 @@ for f in path:
          model_path = f
 
 
-# model_file = tf.keras.models.load_model(model_path)
+model_file = tf.keras.models.load_model(model_path)
 
 
-# #path = input('Enter the path of your image in order to predict:')
-# path = 'https://github.com/Rajkap/Streamlit_app/blob/691694146b2baf55ed03dead842aa2b2d3e90224/templates/'+option+'/'+img_file
-
+#path = input('Enter the path of your image in order to predict:')
+img_path = 'https://github.com/Rajkap/Streamlit_app/blob/691694146b2baf55ed03dead842aa2b2d3e90224/templates/'+option+'/'+img_file
+st.write(img_path)
 # import matplotlib.pyplot as plt
 # img = tf.keras.preprocessing.image.load_img(path, target_size=(160,160))
 # plt.imshow(tf.keras.preprocessing.image.load_img(path))
