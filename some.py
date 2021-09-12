@@ -100,7 +100,7 @@ print(work_dir)
 # st.write(work_dir)
 with ZipFile(os.path.join(work_dir ,'model_file.zip'),'r') as zipobject:
   zipobject.extractall() 
-path = os.listdir(work_dir)
+path = os.scandir(work_dir)
 st.write(path)
 # model_path = None
 # for f in os.scandir("model_file"):
