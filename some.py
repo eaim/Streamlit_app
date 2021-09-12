@@ -3,9 +3,9 @@ import streamlit as st
 # working with sample data.
 import numpy as np
 import pandas as pd
-import seaborn as sns
-import matplotlib
-import matplotlib.pyplot as plt
+# import seaborn as sns
+# import matplotlib
+# import matplotlib.pyplot as plt
 from jinja2 import Environment, FileSystemLoader
 import uuid
 from github import Github
