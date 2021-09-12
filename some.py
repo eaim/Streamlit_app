@@ -1,18 +1,18 @@
 import streamlit as st
 # To make things easier later, we're also importing numpy and pandas for
 # working with sample data.
-import numpy as np
+# import numpy as np
 import pandas as pd
 # import seaborn as sns
 # import matplotlib
-# import matplotlib.pyplot as plt
+import matplotlib.pyplot as plt
 import tensorflow as tf
-from jinja2 import Environment, FileSystemLoader
-import uuid
+# from jinja2 import Environment, FileSystemLoader
+# import uuid
 # from github import Github
 # from dotenv import load_dotenv
 import os
-import collections
+# import collections
 
 # import utils
 
