@@ -2,3 +2,4 @@ matplotlib
 streamlit
 tensorflow
 pandas==1.1.3
+numpy
