@@ -117,7 +117,7 @@ st.write(real_path)
 # img_path = 'https://github.com/Rajkap/Streamlit_app/blob/691694146b2baf55ed03dead842aa2b2d3e90224/templates/'+option+'/'+img_file
 import matplotlib.pyplot as plt
 img = tf.keras.preprocessing.image.load_img(real_path, target_size=(160,160))
-plt.imshow(tf.keras.preprocessing.image.load_img(real_path))
+st.image(tf.keras.preprocessing.image.load_img(real_path))
 dictionary = {0:'Daw Aung San SuuKyi',1:'Jackie Chan',2:'Messi',3:'Barack Obama'}
 x = tf.keras.preprocessing.image.img_to_array(img)
 x = np.expand_dims(x,axis=0)
@@ -127,4 +127,4 @@ classes = model_file.predict(x)
 y_classes=classes.argmax(axis=-1)
 label = y_classes[0]#9
 #print(label)
-print("Model မှခန့်မှန်း လိုက်သော အဖြေမှာ ",dictionary[label], "ဖြစ်ပါသည်။")
+st.write("Model မှခန့်မှန်း လိုက်သော အဖြေမှာ ",dictionary[label], "ဖြစ်ပါသည်။")
