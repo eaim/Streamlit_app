@@ -117,7 +117,7 @@ real_path = os.path.join(work_dir ,template,option,img_file)
 #path = input('Enter the path of your image in order to predict:')
 # img_path = 'https://github.com/Rajkap/Streamlit_app/blob/691694146b2baf55ed03dead842aa2b2d3e90224/templates/'+option+'/'+img_file
 img = tf.keras.preprocessing.image.load_img(real_path, target_size=(160,160))
-st.image(tf.keras.preprocessing.image.load_img(real_path))
+st.image(tf.keras.preprocessing.image.load_img(real_path),width=150, use_column_width=True)
 dictionary = {0:'Daw Aung San SuuKyi',1:'Jackie Chan',2:'Messi',3:'Barack Obama'}
 x = tf.keras.preprocessing.image.img_to_array(img)
 x = np.expand_dims(x,axis=0)
