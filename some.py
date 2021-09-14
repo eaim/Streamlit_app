@@ -48,7 +48,7 @@ import os
 
 
 img_dirs = pd.DataFrame()
-img_dirs['dir'] = ['Messi','Obama','Jackie_Chan','Daw_Su']
+img_dirs['dir'] = ['daw_su','jackie_chan','messi','obama']
 
 template_dirs = pd.DataFrame()
 template_dirs['dir'] = None
